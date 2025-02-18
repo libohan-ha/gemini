@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 助手对话</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .card-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #334155;
+            text-align: center;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+
+        iframe {
+            width: 100%;
+            min-height: 700px;
+            border: none;
+            display: block;
+        }
+
+        .loading-message {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            display: none;
+        }
+
+        iframe:not([loaded])+.loading-message {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            .card {
+                margin-top: 1rem;
+                border-radius: 8px;
+            }
+
+            .card-header {
+                padding: 1rem;
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+            }
+
+            .card-content {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">AI 智能助手</h1>
+            </div>
+            <div class="card-content">
+                <div class="iframe-container">
+                    <iframe src="https://udify.app/chatbot/9sQ48B6qDCtjpKQ8" frameborder="0"
+                        allow="microphone; camera; fullscreen; clipboard-read; clipboard-write" allowfullscreen
+                        referrerpolicy="origin" loading="lazy" onload="this.setAttribute('loaded', '')"
+                        title="AI Chatbot">
+                    </iframe>
+                    <div class="loading-message">
+                        正在加载AI助手...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
